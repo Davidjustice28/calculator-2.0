@@ -39,7 +39,6 @@ function getValue(tag) {
 
 function changeSymbol(value) {
     symbol = value
-    console.log('The symbol is now '+ symbol)
     return symbol
 }
 
@@ -47,7 +46,6 @@ function resetItems() {
     value1 = null
     value2 = null
     symbol = null
-    console.log('Items were set back to null')
     bottomText.innerText = ' '
 }
 
@@ -64,6 +62,7 @@ buttons.forEach((btn) => {
     if(!(btn.innerText == '/' || btn.innerText == '+' || btn.innerText == '-' || btn.innerText == 'C' || btn.innerText == 'X' || btn.innerText == '=' || btn.innerText == 'dark_mode')) {
         btn.addEventListener('click', () => {
             getValue(btn)
+            
         })
     }
     else if(btn.innerText == '/' || btn.innerText == '+' || btn.innerText == '-' || btn.innerText == 'X' || btn.innerText == 'C') {
@@ -73,7 +72,6 @@ buttons.forEach((btn) => {
             })
         } else {
             btn.addEventListener('click', () => {
-                //symbol = btn.innerText
                 changeSymbol(btn.innerText)
                 bottomText.innerText += ` ${symbol}`
             })

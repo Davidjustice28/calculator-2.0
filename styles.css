@@ -9,7 +9,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: orange;
     background-image: linear-gradient(red, orange);
 }
 
@@ -59,6 +58,7 @@ body {
     border-radius: 60px;
     font-weight: 1000;
     font-size: large;
+    color: black;
 }
 
 #left-buttons button:nth-child(1) {
@@ -67,6 +67,7 @@ body {
     width: 75%;
     position: relative;
     top: 7px;
+    border-color: red;
 }
 
 #right-buttons {
@@ -87,6 +88,7 @@ body {
     color: white;
     font-weight: 1000;
     font-size: larger;
+    border-color: orange;
 }
 
 #top-display {
